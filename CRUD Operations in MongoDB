@@ -1,0 +1,15 @@
+show dbs;
+use EmployeeDB;
+db.employees.insertOne({
+name: "Arun",
+salary: 25000,
+place: "Chennai"
+});
+db.employees.find();
+db.employees.updateOne(
+{ name: "Arun" },
+{ $set: { salary: 30000 } }
+);
+db.employees.find();
+db.employees.deleteOne({ name: "Arun" });
+db.employees.find();
