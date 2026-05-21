@@ -1,0 +1,11 @@
+use MarksDB;
+db.scores.insertMany([
+{ name: "Ragul", mark: 85 },
+{ name: "Ravi", mark: 45 },
+{ name: "Sita", mark: 95 },
+{ name: "Kumar", mark: 67 },
+{ name: "Anu", mark: 30 }
+]);
+db.scores.find({ mark: { $gt: 50 } });
+db.scores.find({ mark: { $lte: 60 } });
+db.scores.find({ mark: { $gte: 60, $lte: 90 } });
