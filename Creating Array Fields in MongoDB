@@ -1,0 +1,9 @@
+db.items.insertOne({
+product: "Laptop",
+brands: ["Dell", "HP", "Lenovo", "Asus"]
+});
+db.items.insertOne({
+product: "Mobile",
+brands: ["Samsung", "Apple", "Vivo", "Realme"]
+});
+db.items.find()
