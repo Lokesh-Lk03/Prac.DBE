@@ -1,0 +1,16 @@
+use SalesDB;
+db.sales.insertMany([
+{ product: "TV", price: 20000 },
+{ product: "TV", price: 25000 },
+{ product: "Fridge", price: 30000 },
+{ product: "Washing Machine", price: 18000 },
+{ product: "Fridge", price: 28000 }
+]);
+db.sales.aggregate([
+{
+$group: {
+_id: "$product",
+totalRevenue: { $sum: "$price" }
+}
+}
+]);
